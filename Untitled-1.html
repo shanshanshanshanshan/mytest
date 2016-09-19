@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<style type="text/css">
+a:link {color: #FF0000 ;text-decoration: none}
+a:visited {color: #00FF00}
+a:hover {color: #FF00FF}
+a:active {color: #0000FF}
+</style>
+
+</head>
+
+
+<body>
+
+<div style="background:#EEEEEE;padding:10px;width:200px ;float:left ;">
+<div id=txt style="line-height:18px;font-weight : normal;">设置或检索对象中的文本<font color="#FF0000">字体的粗细</font>。<br />
+</div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　<select style="width:150px" onchange="txt.style.fontWeight=this.options[this.selectedIndex].value;">
+<option value="normal" selected>font-weight : normal</option><option value="bold">font-weight : bold</option><option value="bolder">font-weight : bolder</option><option value="lighter">font-weight : lighter</option>
+<option value="100">font-weight : 100</option><option value="200">font-weight : 200</option><option value="300">font-weight : 300</option>
+<option value="400">font-weight : 400</option><option value="500">font-weight : 500</option><option value="600">font-weight : 600</option>
+<option value="700">font-weight : 700</option><option value="800">font-weight : 800</option><option value="900">font-weight : 900</option>
+</select></div>
+</div>
+
+
+<div style="background:#EEEEEE;padding:10px;width:200px;float:left ;">
+<div id=txt1 style="line-height:18px;font-size : normal;">设置文本<font color="#FF0000">字体的大小</font><br /><br />
+</div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　
+<select style="width:140px" onchange="txt1.style.fontSize=this.options[this.selectedIndex].value;">
+<option value="normal" selected>font-size: normal</option>
+<option value="12px">font-size: 12px</option>
+<option value="50%">font-size: 50%</option>
+</select></div>
+</div>
+
+
+<div style="background:#EEEEEE;padding:15px;width:200px;float:left ;">
+<div id=txt2 style="line-height:18px;font-style : normal;">字体样式<font color="#FF0000">斜体</font></div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　<select style="width:150px" onchange="txt2.style.fontStyle=this.options[this.selectedIndex].value;">
+<option value="normal" selected>font-style : normal</option><option value="italic">font-style :italic</option><option value="oblique">font-style : oblique</option></select></div>
+</div>
+
+
+<div style="background:#EEEEEE;padding:10px;width:220px;float:left ;">
+<div id=txt3 style="line-height:18px;">检索或设置对象中的。
+<font color="#FF0000">文本的装饰</font></div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　<select style="width:180px" onchange="txt3.style.textDecoration=this.options[this.selectedIndex].value;">
+<option value="none" selected>text-decoration : none</option><option value="underline">text-decoration : underline</option><option value="line-through">text-decoration : line-through</option><option value="overline">text-decoration : overline</option><option value="blink">text-decoration : blink</option></select></div>
+</div>
+
+
+<div style="background:#EEEEEE;padding:10px;width:240px;float:left ; ">
+<div id=txt4 style="line-height:18px;text-transform:none;">（text-transform）检索或设置对象中的<font color="#FF0000">文本的大小写</font>。 
+</div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　<select style="width:190px" onchange="txt4.style.textTransform=this.options[this.selectedIndex].value;">
+<option value="none" selected>text-transform : none</option><option value="capitalize">text-transform : capitalize</option><option value="uppercase">text-transform : uppercase</option><option value="lowercase">text-transform : lowercase</option></select></div>
+</div>
+
+
+<script>
+function turnnum(m) {
+var o1=document.all('num');
+var o2=document.all('txt5');
+i=parseInt(o1.value);
+if (m!=0) i++; else i--;
+o1.value=i.toString(10);
+eval('o2.style.lineHeight="'+o1.value+'px"')
+}
+</script>
+<div style="background:#EEEEEE;padding:10px;width:240px; float:left ;">
+<div id=txt5 style="line-height:16px;">line-height属性的值（单位是px），设置<font color="#FF0000">行与行之间的距离</font></div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">
+<input id=num type=text value="16" size=19 readonly>&nbsp;<input type=button value="&nbsp;+&nbsp;" onclick="turnnum(9)">&nbsp;<input 
+type=button value="&nbsp;-&nbsp;" onclick="turnnum(0)">
+</div>
+</div>
+
+
+<script>
+function turnnum1(m) {
+var o1=document.all('num1');
+var o2=document.all('txt6');
+i=parseInt(o1.value);
+if (m!=0) i++; else i--;
+o1.value=i.toString(10);
+eval('o2.style.letterSpacing="'+o1.value+'px"')
+}
+</script>
+<div style="background:#EEEEEE;padding:10px;width:240px; float:left ;">
+<div id=txt6 style="line-height:18px;letter-spacing:0px;">letter-spacing属性的值（单位是px），设置<font color="#FF0000">字与字之间的间隔</font></div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">
+<input id=num1 type=text value="0" size=19 readonly>&nbsp;<input type=button value="&nbsp;+&nbsp;" onclick="turnnum1(9)">&nbsp;<input 
+type=button value="&nbsp;-&nbsp;" onclick="turnnum1(0)">
+</div>
+</div>
+<br />
+<br />
+
+<br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<div style="background:#EEEEEE;padding:10px;width:240px;float:left ;">
+<div id=txt7 style="line-height:18px;layout-flow:vertical-ideographic;text-align:right;">请您用下面的按钮选择这段文字的text-align属性的值。看一看会发生什么</div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　<select style="width:200px" onchange="txt7.style.textAlign=this.options[this.selectedIndex].value;">
+<option value="left">text-align : left</option>
+<option value="center">text-align : center</option>
+<option value="right" selected>text-align : right</option>
+</select></div>
+
+</div>
+
+
+<div style="background:#EEEEEE;padding:10px;width:240px;float:left ;">
+<div>
+<p style="font-size:36px" >参考内容|<a id="test8" style="font-size:12px;" href="">基线对齐</a></p></div>
+
+<div style="background:#CCCCCC;height:24px;padding:2px;">　
+<select style="width:200px" onchange="test8.style.verticalAlign=this.options[this.selectedIndex].value;">
+<option value="baseline">vertical-align :baseline</option>
+<option value="super " selected>vertical-align :super  </option>
+<option value="text-top " selected>vertical-align :text-top </option>
+<option value="middle" selected>vertical-align : middle </option>
+<option value="bottom" selected>vertical-align : bottom </option>
+<option value="text-bottom " selected>vertical-align :text-bottom  </option>
+</select></div>
+</div>
+
+
+
+<div style="background:#EEEEEE;padding:10px;width:240px;float:left ;">
+<div id=txt9 style="direction: rtl; unicode-bidi: bidi-override;">unicode-bidi用于同一个页面里存在从不同方向读进的文本显示与direction属性一起使用。
+</div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　<select style="width:180px" onchange="txt9.style.direction=this.options[this.selectedIndex].value;">
+<option value="ltr">direction : ltr</option><option value="rtl" selected>direction : rtl</option><option value="inherit">direction : inherit</option></select>
+</div>
+<div style="background:#CCCCCC;height:24px;padding:2px;">　<select style="width:180px" 
+onchange="txt9.style.unicodeBidi=this.options[this.selectedIndex].value;">
+<option value="normal">unicode-bidi : normal</option><option value="bidi-override" selected>unicode-bidi : bidi-override</option><option value="embed">unicode-bidi : embed</option></select></div>
+
+<div style="background:#CCCCCC;height:24px;padding:2px;">　
+<select style="width:180px" onchange="txt9.style.whiteSpace=this.options[this.selectedIndex].value;">
+<option value="normal" selected>white-space : normal</option><option value="pre">white-space :  pre</option><option value="nowrap">white-space : nowrap </option></select></div>
+</div>
+
+
+<br />
+<br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+
+
+<script>
+changeSrc = function()
+{
+ 
+elem=document.getElementById('xx')
+
+target=elem.options[elem.selectedIndex].value;
+document.getElementById('zhuan').src=target; 
+
+}
+</script>
+<div style="background:#EEEEEE;padding:20px;width:400px;float:left;">
+<iframe id="zhuan" src="background-attachment1.html" width="400" height="305" scrolling="yes" /></iframe>
+
+<div style="background:#CCCCCC;height:24px;width:370px; padding-left:30px">
+<font  style="font-weight:600">background-attachment:</font>
+<select id="xx" style="width:90px" onchange="changeSrc()">
+<option value="background-attachment1.html" selected> scroll
+</option>
+<option value="background-attachment2.html">fixed</option>
+</select></div>
+</div>
+
+<script>
+change = function()
+{
+ 
+elem1=document.getElementById('xxx')
+elem2=document.getElementById('xxxx')
+target1=elem1.options[elem1.selectedIndex].value;
+target2=elem2.options[elem2.selectedIndex].value;
+target=target1+" "+target2;
+document.getElementById('imgp').style.backgroundPosition=target ; 
+
+}
+change1 = function()
+{
+elem2=document.getElementById('xxxxx')
+target2=elem2.options[elem2.selectedIndex].value;
+document.getElementById('imgp').style.backgroundRepeat=target2 ; 
+
+}
+
+
+</script>
+<div style="background:#EEEEEE;padding:20px;width:500px;position: relative;float:left;">
+<div id="imgp" style=" background-image:url(20150905084114_RPwnV.thumb.224_0.jpeg); background-position: 20%20%;  ;width:500px; height:300px"></div>
+
+<div style="background:#CCCCCC;height:24px;width:440px; padding-left:60px">
+<font  style="font-weight:600">background-position:</font>
+<select id="xxx" style="width:90px" onchange="change()">
+<option value="20%" selected> 20%</option>
+<option value="40%">40%</option>
+<option value="50%">50%</option>
+<option value="70%">70%</option>
+<option value="80%">80%</option>
+<option value="100%">100%</option>
+<option value=" center ">  center </option>
+<option value="top">top</option>
+<option value="bottom">bottom</option>
+<option value=" left "> left </option>
+<option value="right ">right </option>
+
+</select>
+<select id="xxxx" style="width:90px" onchange="change()">
+<option value="20%" selected> 20%</option>
+<option value="40%">40%</option>
+<option value="50%">50%</option>
+<option value="70%">70%</option>
+<option value="80%">80%</option>
+<option value="100%">100%</option>
+<option value=" center ">  center </option>
+<option value="top">top</option>
+<option value="bottom">bottom</option>
+<option value=" left "> left </option>
+<option value="right ">right </option>
+
+</select>
+
+
+</div>
+<div style="background:#CCCCCC;height:24px;width:440px; padding-left:60px">
+<font  style="font-weight:600">background-repeat :</font>
+<select id="xxxxx" style="width:90px" onchange="change1()">
+<option value="repeat" selected> repeat</option>
+<option value="no-repeat ">no-repeat </option>
+<option value="repeat-x">repeat-x</option>
+<option value="repeat-y">repeat-y</option>
+</select></div>
+</div>
+
+<br />
+<br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+
+<br /><br />
+<br /><br />
+<div style="background:#EEEEEE;width:440px; padding:20px; position: relative;   " >
+<div style="background:#EEEEEE;width:440px; position: relative; border:dashed #333333" >
+<div style="background: #EBECAE; width:100px; height:100px; ;">static对left和top不起作用，不能定位，float不占地方</div>
+
+<div style="background: #EBECAE; width:100px; height:100px;position: relative; left:20px; top:20px ">relative相对于原位置计算left和top的值，float占地方,占原来的流</div>
+
+<div style="background: #EBECAE; width: 100px; height: 100px; position: absolute; left: 154px; top: 100px;">absolute可以放置到页面上的任何位置，可覆盖
+</div></div></div>
+
+
+<br /><br />
+<br /><br />
+<div style="background:#EEEEEE;padding:10px;width:300px;position: relative; float:left;">
+<div style="position: relative; margin-right:25px">
+<p>Type square:</p>
+<ul id="demo2" style="list-style-type: none;">
+<li>Coffee</li>
+<li>Tea</li>
+<li>Coca Cola</li>
+</ul>
+</div>
+
+<div style="background:#CCCCCC;height:24px;padding:2px;">　
+<font  style="font-weight:600">list-style-type:</font>
+<select style="width:100px" onchange="demo2.style.listStyleType=this.options[this.selectedIndex].value;">
+<option value="none" selected>none</option>
+<option value="disc">disc</option>
+<option value="circle">circle</option>
+<option value="square">square</option>
+<option value="decimal">decimal</option>
+<option value="lower-roman">lower-roman</option>
+<option value="upper-alpha">upper-alpha</option>
+<option value="lower-alpha">lower-alpha</option>
+
+</select></div>
+</div>
+
+
+<div style="background:#EEEEEE;padding:10px;width:270px;position: relative;float:left; margin-left:30px; ">
+<div style="position: relative; margin-right:22px;">
+<ul id=txt13 style="list-style-position: inside;margin-left:13px;"> 
+
+<li>这是一个名字叫小强的列表项目。他难道不是很可爱吗？</li>
+<li>这是一个名字叫小强的列表项目。他难道不是很可爱吗？</li>
+<li>这是一个名字叫小强的列表项目。他难道不是很可爱吗？</li>
+</ul>
+</div>
+<div style="background:#CCCCCC;height:24px;padding:2px; margin-bottom:10px;">　<select style="width:230px" onchange="txt13.style.listStylePosition=this.options[this.selectedIndex].value;">
+<option value="inside" selected>list-style-position : inside</option><option value="outside">list-style-position : outside</option></select></div>
+</div>
+
+<br />
+<br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+
+
+<p><b><a href="../index.html" tppabs="http://www.w3school.com.cn/index.html" target="_blank">a:link {color: #FF0000;text-decoration: none}		/* 未访问的链接 */
+a:visited {color: #00FF00}	/* 已访问的链接 */
+a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
+a:active {color: #0000FF}	/* 选定的链接 */
+</a></b></p>
+
+
+
+</body>
+</html>
